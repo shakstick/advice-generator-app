@@ -6,6 +6,10 @@
     --dark-blue: hsl(218, 23%, 16%);
 }
 
+html{
+    height: 100%;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -36,6 +40,7 @@ section{
     padding: 2rem 1.5rem;
     border-radius: 10px;
     position: relative;
+    min-height: 150px;
 }
 
 h3{
@@ -63,5 +68,8 @@ blockquote{
 @media(min-width:1200px){
     blockquote{
         font-size: 20px;
+    }
+    section{
+        min-height: 200px;
     }
 }
