@@ -10,7 +10,8 @@ changer.addEventListener("click", quoteGenerator);
 function quoteGenerator() {
   fetch(url)
     .then((response) => response.json())
-    .then(
-      (responseJson) => (quoteSection.textContent = responseJson.slip.advice)
-    );
+    .then((responseJson) => {
+      quoteSection.textContent = responseJson.slip.advice;
+      idSpan.textContent = "#" + responseJson.slip.id;
+    });
 }
